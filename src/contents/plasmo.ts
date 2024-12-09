@@ -1,11 +1,12 @@
 import type { PlasmoCSConfig } from "plasmo"
 
 export const config: PlasmoCSConfig = {
-  matches: ["https://www.plasmo.com/*"]
+  matches: ["https://*.shopee.co.id/*"],
+  world: 'MAIN'
 }
 
 window.addEventListener("load", () => {
-  console.log("content script loaded")
-
-  document.body.style.background = "pink"
+  console.log("content script loaded");
+  const d = document.querySelector('#app')
+  console.log('KOMPONEN', d);
 })

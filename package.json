@@ -10,6 +10,8 @@
     "package": "plasmo package"
   },
   "dependencies": {
+    "@plasmohq/messaging": "^0.6.2",
+    "@plasmohq/storage": "^1.13.0",
     "plasmo": "0.89.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -25,10 +27,21 @@
   },
   "manifest": {
     "host_permissions": [
-      "https://*/*"
+      "https://*/*",
+      "http://*/*"
     ],
     "permissions": [
-      "tabs"
-    ]
+      "tabs",
+      "webRequest",
+      "cookies"
+    ],
+    "commands": {
+      "test": {
+        "suggested_key": {
+          "default": "Alt+W"
+        },
+        "description": "Open the extension main popup"
+      }
+    }
   }
 }
